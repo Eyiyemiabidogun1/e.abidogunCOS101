@@ -2,27 +2,30 @@ use std::io::Read;
 use std::io::Write;
 fn main() {
     let commissioners = vec![
-    "Aigbogun Alamba Daudu,\n", 
-    "Murtala Afeez Bendu,\n", 
-    "Okorocha Calistus Ogbona,\n", 
-    "Adewale Jimoh Akanbi,\n", 
-    "Osazuwa Faith Etieye,\n"
+    "commissioners",
+    "\nAigbogun Alamba Daudu,", 
+    "\nMurtala Afeez Bendu,", 
+    "\nOkorocha Calistus Ogbona,", 
+    "\nAdewale Jimoh Akanbi,", 
+    "\nOsazuwa Faith Etieye\n,"
 ];
 
 let ministries = vec![
-    "Internal Affairs,", 
-    "Justice,", 
-    "Defense,", 
-    "Power & Steel,", 
-    "Petroleum\n,"
+    "\nministries",
+    "\nInternal Affairs,", 
+    "\nJustice,", 
+    "\nDefense,", 
+    "\nPower & Steel,", 
+    "\nPetroleum\n,"
 ];
 
 let zones = vec![
-    "South West,", 
-    "North East,", 
-    "South South,", 
-    "South West,", 
-    "South East,\n"
+    "\nzones",
+    "\nSouth West,", 
+    "\nNorth East,", 
+    "\nSouth South,", 
+    "\nSouth West,", 
+    "\nSouth East,"
 ];
 
 let mut com_file = std::fs::File::create("commissioners.csv").expect("Failed to create");
@@ -49,11 +52,12 @@ let mut zon_open = std::fs::File::open("zones.csv").expect("failed to open");
 com_open.read_to_string(&mut com_string).expect("failed to read");
 min_open.read_to_string(&mut min_string).expect("failed to read");
 zon_open.read_to_string(&mut zon_string).expect("failed to read");
-
 let mut master_file = std::fs::File::create("master.csv").expect("failed to create");
 
 master_file.write_all(com_string.as_bytes()).expect("failed to write");
+master_file.write_all(",".as_bytes()).expect("failed to write_all");
 master_file.write_all(min_string.as_bytes()).expect("failed to write");
+master_file.write_all(",".as_bytes()).expect("failed to write_all");
 master_file.write_all(zon_string.as_bytes()).expect("failed to write");
 
 
