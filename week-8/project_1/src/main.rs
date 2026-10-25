@@ -21,21 +21,21 @@ fn input_for_aps_level() -> usize {
     na
 }
 fn main() {
-    let office_admin= vec![
+    let mut office_admin= vec![
     "Intern(enter 0)",
     "Administrator(enter 1)",
     "Senior Administrator(enter 2)",
     "Office Manager(enter 3)",
     "Director(enter 4)",
     "Ceo(enter 5)"];
-    let academic = vec![
+    let mut academic = vec![
     "You dont know(enter 0)",
     "Research assistant(enter 1)",
     "PhD  candidate(enter 2)",
     "Post-Doc Researcher(enter 3)",
     "Senior lecturer(enter 4)",
     "Dean(enter 5)"];
-     let lawyer = vec![
+     let mut lawyer = vec![
     "Paralegal (enter 0)",
     "Junior Associate (enter 1)",
     "Associate (enter 2)",

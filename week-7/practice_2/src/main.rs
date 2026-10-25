@@ -14,4 +14,4 @@ fn checker() {
 fn main() {
     println!("Welcome! This program checks whether a Character variable contains a digit or not.");
     checker()
-}
+}   

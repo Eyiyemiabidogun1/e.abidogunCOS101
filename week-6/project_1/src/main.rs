@@ -28,7 +28,7 @@ fn main() {
         let answer: i32 = input.trim().parse().expect("Please enter a number");
 
         if answer == 1 {
-            println!();
+            println!(); 
             println!("========== FOOD MENU ==========");
             println!("P. Poundo Yam / Edikangikong Soup - ₦3500");
             println!("F. Fried Rice & Chicken - ₦3000");
@@ -44,7 +44,7 @@ fn main() {
 
                 io::stdin().read_line(&mut food).expect("Failed to read input");
 
-                let food = food.trim();
+                let food = food.trim(); 
 
                 match food {
                     "P" | "p" => {
